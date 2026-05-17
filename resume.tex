@@ -304,36 +304,20 @@ Woodbridge, NJ \textbullet\ (856) 426-5481 \textbullet\ {ahashthiru@gmail.com} \
 
         \vspace{0.2 cm}
 
-         \begin{twocolentry}{
-            
-            
-        \textit{{}{}}}
-            \textbf{Language Interpreter}
-        \end{twocolentry}
-
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Built a custom programming language interpreter using \textbf{recursive-descent parsing}.
-                \item Implemented a lexer to tokenize source code, supporting keywords, operators, literals, and identifiers.
-                \item Designed and constructed an \textbf{abstract syntax tree (AST)} to represent program semantics.
-                \item Enabled program evaluation by traversing and executing \textbf{AST} nodes.
-            \end{highlights}
-        \end{onecolentry}
-
-        \vspace{0.2 cm}
-
     \begin{twocolentry}{
 
 
         \textit{{}{}}}
-            \textbf{Data Visualization \& Prediction Dashboard}
+            \textbf{Secure Sandbox Environment}
         \end{twocolentry}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Developed a machine learning application enabling users to select custom features for model training and generate predictive outputs with real-time \textbf{R-squared} performance metrics, dynamically updating outputs for datasets up to \textbf{100,000+ entries.}
+                \item Built a lightweight container runtime from scratch in C++ using Linux kernel primitives (clone(), namespaces, chroot, cgroups v2, seccomp), achieving process isolation equivalent to Docker without any container framework.
+                \item Designed and implemented a default-deny seccomp syscall filter, reducing the kernel attack surface to $\sim$100 explicitly whitelisted calls and blocking all filesystem/namespace escape vectors.
+                \item Enforced layered resource limits via cgroups v2 (50\% CPU quota, 256 MB memory, 64 PID cap) with setrlimit as a guaranteed fallback, preventing sandboxed processes from impacting host stability.
+                \item Managed the full privilege lifecycle, dropping root to a dedicated unprivileged user post-setup while selectively preserving CAP\_NET\_RAW via Linux ambient capabilities to maintain network functionality across execve.
             \end{highlights}
         \end{onecolentry}
 
