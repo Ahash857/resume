@@ -225,7 +225,7 @@ Woodbridge, NJ \textbullet\ (856) 426-5481 \textbullet\ {ahashthiru@gmail.com} \
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Building a full-stack \textbf{iOS/Android} event app for the ShopRite LPGA Classic with \textbf{8 major features} (auth, scheduling, leaderboard, gallery, notifications, sponsor management, interactive map, admin panel) across a dual \textbf{Ionic mobile + Angular web} frontend (\textbf{41 pages/components}); launching May 15, 2026.
+                \item Built a full-stack \textbf{iOS/Android} event app for the ShopRite LPGA Classic with \textbf{8 major features} (auth, scheduling, leaderboard, gallery, notifications, sponsor management, interactive map, admin panel) across a dual \textbf{Ionic mobile + Angular web} frontend (\textbf{41 pages/components}).
                 \item Architected the backend using \textbf{Spring Boot} and containerized the development environment with \textbf{Docker} to ensure consistent builds across the team.
                 \item Designed a \textbf{13-entity PostgreSQL} schema supporting event scheduling, player 4-some assignments, sponsor tiers, and user profiles.
                 \item Built \textbf{57 RESTful API endpoints} serving personalized schedules, tee-time data, real-time scores, and event content to an \textbf{Angular + Ionic} frontend.
@@ -256,7 +256,26 @@ Woodbridge, NJ \textbullet\ (856) 426-5481 \textbullet\ {ahashthiru@gmail.com} \
 
     
     \section{Projects}
+        
 
+    \begin{twocolentry}{
+
+
+        \textit{{}{}}}
+            \textbf{Secure Sandbox Environment}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Built a lightweight container runtime from scratch in C++ using Linux kernel primitives (clone(), namespaces, chroot, cgroups v2, seccomp), achieving process isolation equivalent to Docker without any container framework.
+                \item Designed and implemented a default-deny \textbf{seccomp syscall filter}, reducing the kernel attack surface to $\sim$100 explicitly whitelisted calls and blocking all filesystem/namespace escape vectors.
+                \item Enforced layered resource limits via \textbf{cgroups v2} (50\% CPU quota, 256 MB memory, 64 PID cap) with setrlimit as a guaranteed fallback, preventing sandboxed processes from impacting host stability.
+                \item Managed the full privilege lifecycle, dropping root to a dedicated unprivileged user post-setup while selectively preserving CAP\_NET\_RAW via Linux ambient capabilities to maintain network functionality across execve.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2cm}
 
         \begin{twocolentry}{
             
@@ -293,26 +312,6 @@ Woodbridge, NJ \textbullet\ (856) 426-5481 \textbullet\ {ahashthiru@gmail.com} \
                 \item Implemented an efficient lexer using strict string tokenization to process source code, handling a robust vocabulary of keywords, relational operators, literals, and identifiers.
                 \item Designed and constructed an \textbf{Abstract Syntax Tree (AST)} using C++ class hierarchies and smart pointers to safely represent and manage program semantics without memory leaks.
 
-            \end{highlights}
-        \end{onecolentry}
-
-
-        \vspace{0.2 cm}
-
-    \begin{twocolentry}{
-
-
-        \textit{{}{}}}
-            \textbf{Secure Sandbox Environment}
-        \end{twocolentry}
-
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Built a lightweight container runtime from scratch in C++ using Linux kernel primitives (clone(), namespaces, chroot, cgroups v2, seccomp), achieving process isolation equivalent to Docker without any container framework.
-                \item Designed and implemented a default-deny \textbf{seccomp syscall filter}, reducing the kernel attack surface to $\sim$100 explicitly whitelisted calls and blocking all filesystem/namespace escape vectors.
-                \item Enforced layered resource limits via \textbf{cgroups v2} (50\% CPU quota, 256 MB memory, 64 PID cap) with setrlimit as a guaranteed fallback, preventing sandboxed processes from impacting host stability.
-                \item Managed the full privilege lifecycle, dropping root to a dedicated unprivileged user post-setup while selectively preserving CAP\_NET\_RAW via Linux ambient capabilities to maintain network functionality across execve.
             \end{highlights}
         \end{onecolentry}
 
