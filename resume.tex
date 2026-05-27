@@ -229,7 +229,6 @@ Woodbridge, NJ \textbullet\ (856) 426-5481 \textbullet\ {ahashthiru@gmail.com} \
                 \item Architected a \textbf{Spring Boot} backend with \textbf{Docker-containerized environments}, standardizing local and CI builds across a multi-developer team and eliminating environment-specific bugs during development.
                 \item Designed a \textbf{13-entity PostgreSQL schema} supporting event scheduling, player foursome assignments, tiered sponsor relationships, and multi-role user profiles, normalized to avoid redundancy across \textbf{57 API endpoints}.
                 \item Developed \textbf{57 RESTful API endpoints} serving personalized schedules, live leaderboard data, tee-time assignments, and role-scoped admin operations to a dual-platform frontend under a shared \textbf{JWT auth model}.
-                \item Collaborated across frontend, backend, and design teams to ship event-critical features on schedule for the ShopRite LPGA Classic launch.
             \end{highlights}
         \end{onecolentry}
         
@@ -269,7 +268,7 @@ Woodbridge, NJ \textbullet\ (856) 426-5481 \textbullet\ {ahashthiru@gmail.com} \
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Built a lightweight container runtime from scratch in C++ using Linux kernel primitives (clone(), namespaces, chroot, cgroups v2, seccomp), achieving process isolation equivalent to Docker without any container framework.
+            \item Designed and built a \textbf{Linux container sandbox} from scratch in C++, implementing the core isolation primitives that underpin containerization (namespaces, seccomp, cgroups) without Docker or any runtime framework.
                 \item Designed and implemented a default-deny \textbf{seccomp syscall filter}, reducing the kernel attack surface to $\sim$100 explicitly whitelisted calls and blocking all filesystem/namespace escape vectors.
                 \item Enforced layered resource limits via \textbf{cgroups v2} (50\% CPU quota, 256 MB memory, 64 PID cap) with setrlimit as a guaranteed fallback, preventing sandboxed processes from impacting host stability.
                 \item Managed the full privilege lifecycle, dropping root to a dedicated unprivileged user post-setup while selectively preserving CAP\_NET\_RAW via Linux ambient capabilities to maintain network functionality across execve.
